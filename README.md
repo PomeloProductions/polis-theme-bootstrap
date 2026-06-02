@@ -1,4 +1,4 @@
-# @polis/theme-vgr
+# @polis/theme-bootstrap
 
 Video Game Rankings theme for Polis-family apps. Provides the SCSS design
 tokens (variables, fonts, base element styles, responsive helpers) and the
@@ -32,7 +32,7 @@ Add to the consuming app's `package.json`:
 ```json
 {
   "dependencies": {
-    "@polis/theme-vgr": "github:PomeloProductions/polis-theme-vgr#v0.1.0"
+    "@polis/theme-bootstrap": "github:PomeloProductions/polis-theme-bootstrap#v0.1.0"
   }
 }
 ```
@@ -45,7 +45,7 @@ Then `npm install`.
 
 ```ts
 import { MantineProvider } from '@mantine/core';
-import { theme } from '@polis/theme-vgr';
+import { theme } from '@polis/theme-bootstrap';
 
 export function App() {
   return (
@@ -61,15 +61,15 @@ export function App() {
 Import the bundle entry point:
 
 ```scss
-@import '@polis/theme-vgr/styles/main.scss';
+@import '@polis/theme-bootstrap/styles/main.scss';
 ```
 
 Or pull in individual partials:
 
 ```scss
-@import '@polis/theme-vgr/styles/variables';
-@import '@polis/theme-vgr/styles/elements';
-@import '@polis/theme-vgr/styles/responsive';
+@import '@polis/theme-bootstrap/styles/variables';
+@import '@polis/theme-bootstrap/styles/elements';
+@import '@polis/theme-bootstrap/styles/responsive';
 ```
 
 `main.scss` currently imports `~bootstrap/scss/bootstrap`, so the consuming
