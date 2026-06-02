@@ -1,0 +1,40 @@
+{
+  "name": "@polis/theme-vgr",
+  "version": "0.1.0",
+  "description": "Video Game Rankings theme for Polis-family apps (SCSS variables, fonts, base elements, responsive helpers, Mantine theme overrides)",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PomeloProductions/polis-theme-vgr.git"
+  },
+  "main": "./src/theme.ts",
+  "types": "./src/theme.ts",
+  "exports": {
+    ".": {
+      "types": "./src/theme.ts",
+      "import": "./src/theme.ts",
+      "default": "./src/theme.ts"
+    },
+    "./styles/*": "./src/styles/*",
+    "./styles/main.scss": "./src/styles/main.scss",
+    "./styles/variables.scss": "./src/styles/variables.scss",
+    "./styles/fonts.scss": "./src/styles/fonts.scss",
+    "./styles/elements.scss": "./src/styles/elements.scss",
+    "./styles/responsive.scss": "./src/styles/responsive.scss",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "tsconfig.json",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@mantine/core": ">=7.0.0",
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@mantine/core": { "optional": true },
+    "react": { "optional": true }
+  }
+}

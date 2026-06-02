@@ -1,0 +1,11 @@
+@import '~bootstrap/scss/bootstrap';
+
+@import "fonts";
+@import "variables";
+@import "elements";
+@import "responsive";
+
+// Remove red weekend styling from Mantine DatePicker
+[data-weekend] {
+  color: inherit !important;
+}
