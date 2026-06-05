@@ -2,9 +2,46 @@
  * Theme Variables
  * ----------------------------------------------------------------------------
  * Custom variables for the application theme
+ *
+ * The `--polis-*` block mirrors the token values exported from `theme.ts`
+ * (`@polis/theme-bootstrap`) as CSS custom-property defaults. Consumers
+ * that import just the SCSS — without going through `<PolisProvider>`
+ * from `@polis/react` — still get a styled surface. When `<PolisProvider>`
+ * is mounted it will overwrite these on `document.documentElement`, so
+ * runtime theme swaps still take precedence.
  */
 
 :root {
+	/* ── Polis canonical tokens (mirrors src/theme.ts) ── */
+	--polis-color-primary: #228be6;
+	--polis-color-primary-hover: #1c7ed6;
+	--polis-color-primary-active: #1971c2;
+	--polis-color-surface: #ffffff;
+	--polis-color-surface-alt: #f8f9fa;
+	--polis-color-text-primary: #212529;
+	--polis-color-text-muted: #6c757d;
+	--polis-color-border: #dee2e6;
+	--polis-color-success: #52ab58;
+	--polis-color-warning: #ffc409;
+	--polis-color-danger: #eb445a;
+	--polis-color-info: #3298b3;
+
+	--polis-font-body: Inter, sans-serif;
+	--polis-font-heading: Inter, sans-serif;
+	--polis-font-mono: "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+	--polis-radius-sm: 2px;
+	--polis-radius-md: 4px;
+	--polis-radius-lg: 8px;
+	--polis-radius-full: 9999px;
+
+	--polis-spacing-xs: 4px;
+	--polis-spacing-sm: 8px;
+	--polis-spacing-md: 16px;
+	--polis-spacing-lg: 24px;
+	--polis-spacing-xl: 32px;
+
+	/* ── Legacy VGR / Bootstrap-styled palette (kept for backward-compat) ── */
 	/* Primary Colors */
 	--color-primary: #fe9024;
 	--color-primary-rgb: 56, 128, 255;
