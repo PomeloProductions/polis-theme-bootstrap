@@ -12,30 +12,30 @@ import type { PolisTheme } from '@polis/react/theme/PolisTheme';
  * forward it into Mantine.
  */
 export const mantineTheme = createTheme({
-    primaryColor: 'blue',
-    fontFamily: 'Inter, sans-serif',
-    other: {
-        primaryShade: { light: 6, dark: 8 },
-    },
-    components: {
-        Table: {
-            styles: {
-                th: {
-                    backgroundColor: '#f8f9fa',
-                    borderBottom: '2px solid #dee2e6',
-                    padding: '1rem',
-                },
-                td: {
-                    padding: '1rem',
-                },
-                tr: {
-                    '&:hover': {
-                        backgroundColor: '#f8f9fa',
-                    },
-                },
-            },
+  primaryColor: 'blue',
+  fontFamily: 'Inter, sans-serif',
+  other: {
+    primaryShade: { light: 6, dark: 8 },
+  },
+  components: {
+    Table: {
+      styles: {
+        th: {
+          backgroundColor: '#f8f9fa',
+          borderBottom: '2px solid #dee2e6',
+          padding: '1rem',
         },
+        td: {
+          padding: '1rem',
+        },
+        tr: {
+          '&:hover': {
+            backgroundColor: '#f8f9fa',
+          },
+        },
+      },
     },
+  },
 });
 
 /**
@@ -50,45 +50,45 @@ export const mantineTheme = createTheme({
  * other colour tokens align with Bootstrap 5 defaults.
  */
 export const theme: PolisTheme = {
-    name: 'bootstrap',
+  name: 'bootstrap',
 
-    colors: {
-        primary: '#228be6',
-        primaryHover: '#1c7ed6',
-        primaryActive: '#1971c2',
-        surface: '#ffffff',
-        surfaceAlt: '#f8f9fa',
-        textPrimary: '#212529',
-        textMuted: '#6c757d',
-        border: '#dee2e6',
-        success: '#52ab58',
-        warning: '#ffc409',
-        danger: '#eb445a',
-        info: '#3298b3',
-    },
+  colors: {
+    primary: '#228be6',
+    primaryHover: '#1c7ed6',
+    primaryActive: '#1971c2',
+    surface: '#ffffff',
+    surfaceAlt: '#f8f9fa',
+    textPrimary: '#212529',
+    textMuted: '#6c757d',
+    border: '#dee2e6',
+    success: '#52ab58',
+    warning: '#ffc409',
+    danger: '#eb445a',
+    info: '#3298b3',
+  },
 
-    fonts: {
-        body: 'Inter, sans-serif',
-        heading: 'Inter, sans-serif',
-        mono: '"SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-    },
+  fonts: {
+    body: 'Inter, sans-serif',
+    heading: 'Inter, sans-serif',
+    mono: '"SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+  },
 
-    radius: {
-        sm: '2px',
-        md: '4px',
-        lg: '8px',
-        full: '9999px',
-    },
+  radius: {
+    sm: '2px',
+    md: '4px',
+    lg: '8px',
+    full: '9999px',
+  },
 
-    spacing: {
-        xs: '4px',
-        sm: '8px',
-        md: '16px',
-        lg: '24px',
-        xl: '32px',
-    },
+  spacing: {
+    xs: '4px',
+    sm: '8px',
+    md: '16px',
+    lg: '24px',
+    xl: '32px',
+  },
 
-    mantineTheme,
+  mantineTheme,
 };
 
 export default theme;
