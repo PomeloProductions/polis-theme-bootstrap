@@ -41,15 +41,44 @@ Then `npm install`.
 
 ## Importing
 
-### Mantine theme
+### Polis theme (recommended)
 
-```ts
-import { MantineProvider } from '@mantine/core';
+`@polis/theme-bootstrap` exports a `theme: PolisTheme` object that
+satisfies the canonical interface in `@polis/react/theme/PolisTheme`.
+Pass it to `<PolisProvider>` from `@polis/react`:
+
+```tsx
+import { PolisProvider } from '@polis/react';
 import { theme } from '@polis/theme-bootstrap';
 
 export function App() {
   return (
-    <MantineProvider theme={theme}>
+    <PolisProvider theme={theme}>
+      {/* ... */}
+    </PolisProvider>
+  );
+}
+```
+
+`PolisProvider` injects every token as a `--polis-*` CSS custom
+property and wraps children in `<MantineProvider>` using the theme's
+embedded `mantineTheme` override. Swap themes by changing only the
+import on the second line — components in `@polis/react` that read
+`var(--polis-*)` will pick up the new palette automatically.
+
+### Mantine theme (standalone)
+
+If you only need the Mantine theme overrides (no token interface, no
+PolisProvider), the `mantineTheme` export is the same object that's
+embedded in `theme.mantineTheme`:
+
+```ts
+import { MantineProvider } from '@mantine/core';
+import { mantineTheme } from '@polis/theme-bootstrap';
+
+export function App() {
+  return (
+    <MantineProvider theme={mantineTheme}>
       {/* ... */}
     </MantineProvider>
   );
