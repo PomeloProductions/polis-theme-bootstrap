@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PomeloProductions/polis-theme-vgr.git"
+    "url": "git+https://github.com/PomeloProductions/polis-theme-bootstrap.git"
   },
   "main": "./src/theme.ts",
   "types": "./src/theme.ts",
