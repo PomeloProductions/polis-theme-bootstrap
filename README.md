@@ -52,11 +52,7 @@ import { PolisProvider } from '@polis/react';
 import { theme } from '@polis/theme-bootstrap';
 
 export function App() {
-  return (
-    <PolisProvider theme={theme}>
-      {/* ... */}
-    </PolisProvider>
-  );
+  return <PolisProvider theme={theme}>{/* ... */}</PolisProvider>;
 }
 ```
 
