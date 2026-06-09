@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #3880ff;
+  --primary-color: var(--polis-color-primary);
   --primary-shade: #3171e0;
   --primary-tint: #4c8dff;
   --medium-color: #92949c;
@@ -34,7 +34,7 @@ h6 {
   --padding-end: 20px;
 }
 .button {
-  --background: var(--color-primary);
+  --background: var(--polis-color-primary);
   --background-hover: var(--color-primary-shade);
   --background-activated: var(--color-primary-shade);
   --background-focused: var(--color-primary-shade);
@@ -53,8 +53,8 @@ h6 {
   --background-hover: rgba(var(--color-primary-rgb), 0.1);
   --background-activated: rgba(var(--color-primary-rgb), 0.2);
   --background-focused: rgba(var(--color-primary-rgb), 0.1);
-  --color: var(--color-primary);
-  --border-color: var(--color-primary);
+  --color: var(--polis-color-primary);
+  --border-color: var(--polis-color-primary);
   --border-width: 1px;
   --border-style: solid;
 }
@@ -89,7 +89,7 @@ h6 {
   --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   --header-color: var(--color-dark);
   --message-color: var(--color-medium);
-  --button-color: var(--color-primary);
+  --button-color: var(--polis-color-primary);
   --button-background: transparent;
   --button-background-hover: rgba(var(--color-primary-rgb), 0.1);
   --button-background-activated: rgba(var(--color-primary-rgb), 0.2);
