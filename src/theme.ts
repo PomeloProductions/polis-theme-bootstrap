@@ -21,8 +21,8 @@ export const mantineTheme = createTheme({
     Table: {
       styles: {
         th: {
-          backgroundColor: '#f8f9fa',
-          borderBottom: '2px solid #dee2e6',
+          backgroundColor: 'var(--polis-color-surface-alt, #f8f9fa)',
+          borderBottom: '2px solid var(--polis-color-border, #dee2e6)',
           padding: '1rem',
         },
         td: {
@@ -30,7 +30,7 @@ export const mantineTheme = createTheme({
         },
         tr: {
           '&:hover': {
-            backgroundColor: '#f8f9fa',
+            backgroundColor: 'var(--polis-color-surface-alt, #f8f9fa)',
           },
         },
       },
