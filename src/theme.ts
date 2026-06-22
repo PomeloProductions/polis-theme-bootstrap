@@ -56,6 +56,12 @@ export const theme: PolisTheme = {
     primary: '#228be6',
     primaryHover: '#1c7ed6',
     primaryActive: '#1971c2',
+    // Mantine blue[1] / blue[2] — light tints of the primary, used for
+    // hover/selected backgrounds on neutral surfaces.
+    primaryTint: '#d0ebff',
+    primarySubtle: '#a5d8ff',
+    // White reads cleanly on the blue[6] primary used by buttons / badges.
+    primaryContrast: '#ffffff',
     surface: '#ffffff',
     surfaceAlt: '#f8f9fa',
     textPrimary: '#212529',
