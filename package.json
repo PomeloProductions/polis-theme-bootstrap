@@ -1,6 +1,6 @@
 {
   "name": "@polis/theme-bootstrap",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Video Game Rankings theme for Polis-family apps (SCSS variables, fonts, base elements, responsive helpers, Mantine theme overrides)",
   "type": "module",
   "license": "MIT",
