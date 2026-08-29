@@ -73,6 +73,33 @@ export const theme: PolisTheme = {
     info: '#3298b3',
   },
 
+  /**
+   * Dark colour tokens. Surfaces track Bootstrap 5.3's dark theme
+   * (`--bs-body-bg` #212529 body, `--bs-tertiary-bg` #2b3035 elevated) so the
+   * SCSS surface stays in step with `data-bs-theme="dark"`. The primary
+   * lightens to Mantine blue[4] (#4dabf7) to hold contrast against the dark
+   * body; `primaryContrast` stays dark ink for filled buttons.
+   */
+  dark: {
+    primary: '#4dabf7',
+    primaryHover: '#74c0fc',
+    primaryActive: '#a5d8ff',
+    // Deep blue backgrounds for subtle/selected states on dark surfaces.
+    primaryTint: '#1b3a5b',
+    primarySubtle: '#132840',
+    // Dark ink reads on the light-blue primary used for filled buttons.
+    primaryContrast: '#0b0d10',
+    surface: '#212529',
+    surfaceAlt: '#2b3035',
+    textPrimary: '#dee2e6',
+    textMuted: '#adb5bd',
+    border: '#495057',
+    success: '#69db7c',
+    warning: '#ffd43b',
+    danger: '#ff8787',
+    info: '#66d9e8',
+  },
+
   fonts: {
     body: 'Inter, sans-serif',
     heading: 'Inter, sans-serif',

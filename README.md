@@ -62,6 +62,26 @@ embedded `mantineTheme` override. Swap themes by changing only the
 import on the second line — components in `@polis/react` that read
 `var(--polis-*)` will pick up the new palette automatically.
 
+### Dark mode
+
+This theme ships a full dark colour set (in `theme.dark`) whose surfaces track
+Bootstrap 5.3's dark theme (`--bs-body-bg` #212529 body, `--bs-tertiary-bg`
+#2b3035 elevated). `<PolisProvider>` (from `@polis/react` ≥ the dark-mode
+release) resolves the active scheme (`'light' | 'dark' | 'system'`), injects the
+matching token set, and sets `data-bs-theme="dark"` on `<html>` so Bootstrap's
+own dark mode engages in lockstep:
+
+```tsx
+<PolisProvider theme={theme} defaultAppliedColorScheme="system">
+  {/* ... */}
+</PolisProvider>
+```
+
+SCSS-only consumers (no `<PolisProvider>`) get dark by setting
+`data-bs-theme="dark"` or `data-polis-color-scheme="dark"` on the root element —
+`styles/variables.scss` overrides the `--polis-color-*` tokens under those
+selectors.
+
 ### Mantine theme (standalone)
 
 If you only need the Mantine theme overrides (no token interface, no
