@@ -183,6 +183,33 @@
   --color-navigation: #6600cc;
 }
 
+/*
+ * ── Polis dark tokens ──
+ * SCSS-only consumers (no <PolisProvider>) get dark mode by setting
+ * `data-bs-theme="dark"` (Bootstrap 5.3 native) or `data-polis-color-scheme="dark"`
+ * on the root element. When <PolisProvider> is mounted it overwrites these
+ * inline on document.documentElement, so this block is the standalone default.
+ * Mirrors the `dark` set in src/theme.ts.
+ */
+:root[data-bs-theme='dark'],
+:root[data-polis-color-scheme='dark'] {
+  --polis-color-primary: #4dabf7;
+  --polis-color-primary-hover: #74c0fc;
+  --polis-color-primary-active: #a5d8ff;
+  --polis-color-primary-tint: #1b3a5b;
+  --polis-color-primary-subtle: #132840;
+  --polis-color-primary-contrast: #0b0d10;
+  --polis-color-surface: #212529;
+  --polis-color-surface-alt: #2b3035;
+  --polis-color-text-primary: #dee2e6;
+  --polis-color-text-muted: #adb5bd;
+  --polis-color-border: #495057;
+  --polis-color-success: #69db7c;
+  --polis-color-warning: #ffd43b;
+  --polis-color-danger: #ff8787;
+  --polis-color-info: #66d9e8;
+}
+
 /* Dark Theme */
 body.dark {
   --color-primary: #428cff;
