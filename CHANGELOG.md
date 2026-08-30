@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/PomeloProductions/polis-theme-bootstrap/compare/v0.2.0...v0.3.0) (2026-08-30)
+
+
+### Features
+
+* Dark mode support ([f90b289](https://github.com/PomeloProductions/polis-theme-bootstrap/commit/f90b28912244bbb7f012044e0b1ea8d7a97edb2d))
+* Dark mode support ([e2ea86f](https://github.com/PomeloProductions/polis-theme-bootstrap/commit/e2ea86f707780e68d971fe27378d79005d2f5da3))
+
 ## [0.2.0](https://github.com/PomeloProductions/polis-theme-bootstrap/compare/v0.1.0...v0.2.0) (2026-06-22)
 
 
