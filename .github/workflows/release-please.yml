@@ -12,8 +12,53 @@ permissions:
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      # Single-package manifest ("." only) → release-please-action@v5 emits the
+      # singular `release_created` output (not the plural `releases_created`).
+      release_created: ${{ steps.release.outputs.release_created }}
     steps:
       - uses: googleapis/release-please-action@v5
+        id: release
         with:
           # Manifest-driven configuration; release-please reads both files.
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-npm:
+    # Runs only when release-please actually cut a release (owner merged the
+    # release PR). This package ships TypeScript source directly — main/types/
+    # exports all point at ./src/*.ts and `files` ships `src` — so there is no
+    # build step; we publish the source as-is.
+    needs: release-please
+    if: needs.release-please.outputs.release_created == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          # No lockfile in this repo; key the npm cache off package.json.
+          cache: npm
+          cache-dependency-path: package.json
+
+      - name: Install dependencies
+        # No lockfile → use `npm install` (matches code-checks.yaml). The repo's
+        # .npmrc sets legacy-peer-deps so the @polis/react peer conflict resolves.
+        run: npm install --no-audit --no-fund
+
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          PKG=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "$PKG@$VERSION" version >/dev/null 2>&1; then
+            echo "$PKG@$VERSION already published; skipping."
+          else
+            npm publish --access public
+          fi
