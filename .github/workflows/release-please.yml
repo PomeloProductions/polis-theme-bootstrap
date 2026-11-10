@@ -33,6 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -40,11 +41,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 22
           registry-url: 'https://registry.npmjs.org'
           # No lockfile in this repo; key the npm cache off package.json.
           cache: npm
           cache-dependency-path: package.json
+
+      - name: Upgrade npm (trusted publishing needs >= 11.5.1)
+        run: npm install -g npm@latest
 
       - name: Install dependencies
         # No lockfile → use `npm install` (matches code-checks.yaml). The repo's
@@ -52,8 +56,6 @@ jobs:
         run: npm install --no-audit --no-fund
 
       - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           PKG=$(node -p "require('./package.json').name")
           VERSION=$(node -p "require('./package.json').version")
