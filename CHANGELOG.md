@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/PomeloProductions/polis-theme-bootstrap/compare/v0.3.0...v0.3.1) (2026-11-10)
+
+
+### Bug Fixes
+
+* Define primaryTint/primarySubtle CSS vars in light mode :root ([4e340ee](https://github.com/PomeloProductions/polis-theme-bootstrap/commit/4e340ee90edf31a48aa537c18a4bca24324d35a7))
+* Define primaryTint/primarySubtle CSS vars in light mode :root ([21b11ca](https://github.com/PomeloProductions/polis-theme-bootstrap/commit/21b11cac538af8ab649ba83df71273834ca8c2cd))
+
 ## [0.3.0](https://github.com/PomeloProductions/polis-theme-bootstrap/compare/v0.2.0...v0.3.0) (2026-08-30)
 
 
