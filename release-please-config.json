@@ -3,7 +3,7 @@
   "release-type": "node",
   "packages": {
     ".": {
-      "package-name": "@polis/theme-bootstrap",
+      "package-name": "@polisplatform/theme-bootstrap",
       "include-component-in-tag": false,
       "changelog-path": "CHANGELOG.md",
       "release-as": null,

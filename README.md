@@ -1,4 +1,4 @@
-# @polis/theme-bootstrap
+# @polisplatform/theme-bootstrap
 
 Video Game Rankings theme for Polis-family apps. Provides the SCSS design
 tokens (variables, fonts, base element styles, responsive helpers) and the
@@ -32,7 +32,7 @@ Add to the consuming app's `package.json`:
 ```json
 {
   "dependencies": {
-    "@polis/theme-bootstrap": "github:PomeloProductions/polis-theme-bootstrap#v0.1.0"
+    "@polisplatform/theme-bootstrap": "github:PomeloProductions/polis-theme-bootstrap#v0.1.0"
   }
 }
 ```
@@ -43,13 +43,13 @@ Then `npm install`.
 
 ### Polis theme (recommended)
 
-`@polis/theme-bootstrap` exports a `theme: PolisTheme` object that
-satisfies the canonical interface in `@polis/react/theme/PolisTheme`.
-Pass it to `<PolisProvider>` from `@polis/react`:
+`@polisplatform/theme-bootstrap` exports a `theme: PolisTheme` object that
+satisfies the canonical interface in `@polisplatform/react/theme/PolisTheme`.
+Pass it to `<PolisProvider>` from `@polisplatform/react`:
 
 ```tsx
-import { PolisProvider } from '@polis/react';
-import { theme } from '@polis/theme-bootstrap';
+import { PolisProvider } from '@polisplatform/react';
+import { theme } from '@polisplatform/theme-bootstrap';
 
 export function App() {
   return <PolisProvider theme={theme}>{/* ... */}</PolisProvider>;
@@ -59,14 +59,14 @@ export function App() {
 `PolisProvider` injects every token as a `--polis-*` CSS custom
 property and wraps children in `<MantineProvider>` using the theme's
 embedded `mantineTheme` override. Swap themes by changing only the
-import on the second line — components in `@polis/react` that read
+import on the second line — components in `@polisplatform/react` that read
 `var(--polis-*)` will pick up the new palette automatically.
 
 ### Dark mode
 
 This theme ships a full dark colour set (in `theme.dark`) whose surfaces track
 Bootstrap 5.3's dark theme (`--bs-body-bg` #212529 body, `--bs-tertiary-bg`
-#2b3035 elevated). `<PolisProvider>` (from `@polis/react` ≥ the dark-mode
+#2b3035 elevated). `<PolisProvider>` (from `@polisplatform/react` ≥ the dark-mode
 release) resolves the active scheme (`'light' | 'dark' | 'system'`), injects the
 matching token set, and sets `data-bs-theme="dark"` on `<html>` so Bootstrap's
 own dark mode engages in lockstep:
@@ -90,7 +90,7 @@ embedded in `theme.mantineTheme`:
 
 ```ts
 import { MantineProvider } from '@mantine/core';
-import { mantineTheme } from '@polis/theme-bootstrap';
+import { mantineTheme } from '@polisplatform/theme-bootstrap';
 
 export function App() {
   return (
@@ -106,15 +106,15 @@ export function App() {
 Import the bundle entry point:
 
 ```scss
-@import '@polis/theme-bootstrap/styles/main.scss';
+@import '@polisplatform/theme-bootstrap/styles/main.scss';
 ```
 
 Or pull in individual partials:
 
 ```scss
-@import '@polis/theme-bootstrap/styles/variables';
-@import '@polis/theme-bootstrap/styles/elements';
-@import '@polis/theme-bootstrap/styles/responsive';
+@import '@polisplatform/theme-bootstrap/styles/variables';
+@import '@polisplatform/theme-bootstrap/styles/elements';
+@import '@polisplatform/theme-bootstrap/styles/responsive';
 ```
 
 `main.scss` currently imports `~bootstrap/scss/bootstrap`, so the consuming
