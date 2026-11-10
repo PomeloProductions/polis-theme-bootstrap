@@ -1,5 +1,5 @@
 import { createTheme } from '@mantine/core';
-import type { PolisTheme } from '@polis/react/theme/PolisTheme';
+import type { PolisTheme } from '@polisplatform/react/theme/PolisTheme';
 
 /**
  * Mantine theme overrides for the Video Game Rankings application.
@@ -39,11 +39,11 @@ export const mantineTheme = createTheme({
 });
 
 /**
- * `@polis/theme-bootstrap` — the Polis token bundle that drives the
+ * `@polisplatform/theme-bootstrap` — the Polis token bundle that drives the
  * VGR-flavored visual identity (Bootstrap-rooted SCSS palette + Mantine
  * theme override).
  *
- * Pass this to `<PolisProvider theme={theme}>` from `@polis/react`.
+ * Pass this to `<PolisProvider theme={theme}>` from `@polisplatform/react`.
  *
  * The primary palette tracks the Mantine theme's `primaryColor: 'blue'`,
  * which is what the actual Mantine surface renders in the VGR app. The
